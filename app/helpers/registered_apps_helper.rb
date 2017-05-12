@@ -1,0 +1,2 @@
+module RegisteredAppsHelper
+end

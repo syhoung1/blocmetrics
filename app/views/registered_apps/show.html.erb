@@ -1,0 +1,28 @@
+<div class='col-md-12'>
+  <h2>
+    <%= @registered_app.name %> - <%= link_to @registered_app.URL %>
+    <div class='pull-right'>
+      <%= link_to "Edit", edit_user_registered_app_path(@registered_app.user, @registered_app) %>
+      <%= link_to "Delete", "#" %>
+    </div>
+  </h2>
+  <div>
+    <h3>Analytics go here</h3>
+    <div class='col-md-3'>
+      <h4>Stat name goes here</h4>
+      <p>statistics go here</p>
+    </div>
+    <div class='col-md-3'>
+      <h4>Stat name goes here</h4>
+      <p>statistics go here</p>
+    </div>
+    <div class='col-md-3'>
+      <h4>Stat name goes here</h4>
+      <p>statistics go here</p>
+    </div>
+    <div class='col-md-3'>
+      <h4>Stat name goes here</h4>
+      <p>statistics go here</p>
+    </div>
+  </div>
+</div>
