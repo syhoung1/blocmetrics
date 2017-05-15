@@ -1,8 +1,8 @@
 <div class='col-md-12'>
   <h2>
-    <%= @registered_app.name %> - <%= link_to @registered_app.URL %>
+    <%= @registered_app.name %> - <%= link_to @registered_app.url %>
     <div class='pull-right'>
-      <%= link_to "Edit", edit_user_registered_app_path(@registered_app.user, @registered_app) %>
+      <%= link_to "Edit", edit_registered_app_path %>
       <%= link_to "Delete", "#" %>
     </div>
   </h2>
