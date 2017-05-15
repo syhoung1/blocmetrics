@@ -8,21 +8,11 @@
   </h2>
   <div>
     <h3>Analytics go here</h3>
-    <div class='col-md-3'>
-      <h4>Stat name goes here</h4>
-      <p>statistics go here</p>
-    </div>
-    <div class='col-md-3'>
-      <h4>Stat name goes here</h4>
-      <p>statistics go here</p>
-    </div>
-    <div class='col-md-3'>
-      <h4>Stat name goes here</h4>
-      <p>statistics go here</p>
-    </div>
-    <div class='col-md-3'>
-      <h4>Stat name goes here</h4>
-      <p>statistics go here</p>
-    </div>
+    <% @events.each do |event, name| %>
+      <div class='col-md-3'>
+        <h4>Event: <%= event %></h4>
+        <p>Count: <%= name.count %></p>
+      </div>
+    <% end %>
   </div>
 </div>
