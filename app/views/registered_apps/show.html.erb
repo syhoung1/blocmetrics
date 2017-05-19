@@ -8,13 +8,21 @@
   </h2>
   <div>
     <h3>Analytics</h3>
-    <div class='col-md-6'>
-      <h4>Events:</h4>
-      <p><%= pie_chart @registered_app.events.group(:name).count %></p>
-    </div>
-    <div class='col-md-6'>
-      <h4>Events over time:</h4>
-      <p><%= line_chart @registered_app.events.group_by_day(:created_at).count %></p>
-    </div>
+    <% if !@registered_app.events.empty? %>
+        <div class='col-md-6'>
+          <h4>Events:</h4>
+          <%= pie_chart @registered_app.events.group(:name).count %>
+        </div>
+        <div class='col-md-6'>
+          <h4>Events over time:</h4>
+          <%= line_chart @registered_app.events.group_by_day(:created_at).count %><
+        </div>
+    <% else %>
+      <div class='jumbotron'>
+        <div class='col-md-6'>
+          <h4>No information yet!</h4>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
