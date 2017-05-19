@@ -1,0 +1,2 @@
+module EventsController::APIHelper
+end

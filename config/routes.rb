@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   get 'welcome/about'
   
   root 'welcome#index'
+  
+  namespace :api, default: { format: :json } do
+    match '/events', to: 'events#preflight', via: [:options]
+    resources :events, only: [:create]
+  end
 end

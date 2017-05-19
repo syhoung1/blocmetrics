@@ -1,5 +1,5 @@
 class RegisteredAppsController < ApplicationController
-  before_action :check_url, only: [:create, :update]
+  # before_action :check_url, only: [:create, :update]
   
   def index
     @registered_apps = current_user.registered_apps
