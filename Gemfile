@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'groupdate'
+gem 'chartkick'
 gem 'bootstrap-sass'
 gem 'figaro'
 gem 'devise'
