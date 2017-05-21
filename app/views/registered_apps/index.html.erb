@@ -1,10 +1,11 @@
 <div class='container'>
-  <%= link_to "New Application", new_registered_app_path %>
-  <% @registered_apps.each do |app| %>
-    <div class='container'>
-      <div class='row'>
-        <%= link_to  app.name, app %>
-      </div>
-    </div>
-  <% end %>
+  <div class='list-group'>
+    <button><%= link_to "New Application", new_registered_app_path %></button>
+      <% @registered_apps.each do |app| %>
+          <%= link_to "Application: #{app.name}", app, class: 'list-group-item list-group-item-action' %>
+        <div class='app-link-group'>
+          <%= link_to "Go to this app", app.url, class: 'app-link' %> <span class='glyphicon glyphicon-arrow-right'></span>
+        </div>
+      <% end %>
+  </div>
 </div>

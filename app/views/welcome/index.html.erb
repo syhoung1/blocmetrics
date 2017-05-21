@@ -1,2 +1,27 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class='container container-full'>
+<div class='col-md-8 col-md-offset-2'>
+  <div id='welcome' class='carousel slide welcome-carousel' data-ride='carousel' data-interval=''>
+    <ol class='carousel-indicators bg-inverse'>
+      <li data-target='#welcome' data-slide-to='0' class='active'></li>
+      <li data-target='#welcome' data-slide-to='1'></li>
+    </ol>
+    <div class='carousel-inner center' role='listbox'>
+      <div class='item active'>
+        <h1>Welcome to Blocmetrics!</h1>
+        <h3>New user?</h3>
+        <p><%= link_to "Sign up", new_user_registration_path %> today!</p>
+      </div>
+      <div class='item'>
+        <span class='glyphicon glyphicon-stats d-block img-fluid'></span>
+        <h3 class='description'>Use Blocmetrics to help you keep statistics on your applications!</h3>
+      </div>
+    </div>
+    <a class='carousel-control-left' href='#welcome' role='button' data-slide='prev'>
+      <span class='glyphicon glyphicon-chevron-left'></span>
+    </a>
+    <a class='carousel-control-right' href='#welcome' role='button' data-slide='next'>
+      <span class='glyphicon glyphicon-chevron-right'></span>
+    </a>
+  </div>
+</div>
+</div>
